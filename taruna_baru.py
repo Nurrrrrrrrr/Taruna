@@ -215,11 +215,11 @@ st.markdown("""
 
 /* ======= A/B CARDS ======= */
 .ab-card { border-radius: 14px; padding: 20px 16px; text-align: center; }
-.ab-card.awal  { background: var(--green-light); border: 2px solid #A9DFBF; }
+.ab-card.awal eclipse  { background: var(--green-light); border: 2px solid #A9DFBF; }
 .ab-card.akhir { background: var(--navy-light);  border: 2px solid #C9D6EE; }
 .ab-period { font-size: 0.78rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
 .ab-value  { font-size: 1.38rem; font-weight: 900; margin-bottom: 5px; }
-.ab-card.awal  .ab-value { color: var(--green); }
+.ab-card.awal .ab-value { color: var(--green); }
 .ab-card.akhir .ab-value { color: var(--navy); }
 .ab-desc { font-size: 0.68rem; color: var(--text-mid); }
 .ab-card.warning { background: var(--orange-light); border: 2px solid var(--orange); }
@@ -304,213 +304,16 @@ st.markdown("""
 
 /* SELECT BOX */
 [data-testid="stSidebar"] [data-baseweb="select"] > div {
-    background-color: background-color: #1B3A6B !important;
+    background-color: #1B3A6B !important;
     border: 1.5px solid rgba(255,255,255,0.60) !important;
-    border-radius: 10px !important; transition: border-color 0.2s, background 0.2s !important;
+    border-radius: 10px !important; 
+    transition: border-color 0.2s, background 0.2s !important;
 }
 [data-testid="stSidebar"] [data-baseweb="select"] > div:hover {
-    Profesionalisasi dashboard StreamlitClaude finished the responseYou said: ubah tampilan dari dashboard streamlit menjadi lebih profesional dengan mengurangi simbol yang tidak pentingdashboard_karang_taruna.pypyData Sintesis (CP).xlsxxlsxrequirements.txt8 linestxtubah tampilan dari dashboard streamlit menjadi lebih profesional dengan mengurangi simbol yang tidak penting15 MeiClaude responded: Sekarang saya sudah memahami keseluruhan kode.Merancang penghapusan simbol untuk profesionalisasi dashboard StreamlitMerancang penghapusan simbol untuk profesionalisasi dashboard StreamlitSekarang saya sudah memahami keseluruhan kode. Saya akan menyalin file dan membersihkan semua simbol/emoji yang tidak perlu untuk tampilan yang lebih profesional.Edited 21 files, ran a commandEdited 21 files, ran a commandYou said: mungkin ini bisa diganti jadi lebih rapi dan menggunakan sidebar yang interaktif, kemudian tulisan tahun dan bulan dibuat lebih jelas saat dibacamungkin ini bisa diganti jadi lebih rapi dan menggunakan sidebar yang interaktif, kemudian tulisan tahun dan bulan dibuat lebih jelas saat dibaca16 MeiClaude responded: Saya lihat masalahnya — ada dua tombol "Pilih File Excel" yang muncul dan teks dropdown tahun/bulan gelap sehingga sulit dibaca.Mengidentifikasi masalah sidebar dan merencanakan perbaikan CSSMengidentifikasi masalah sidebar dan merencanakan perbaikan CSSSaya lihat masalahnya — ada dua tombol "Pilih File Excel" yang muncul dan teks dropdown tahun/bulan gelap sehingga sulit dibaca. Saya akan perbaiki CSS sidebar secara menyeluruh.Overhaul sidebar CSS - fix selectbox readability, remove duplicate button, make interactiveOverhaul sidebar CSS - fix selectbox readability, remove duplicate button, make interactiveSekarang perbarui CSS logo sidebar agar teks "KT" tampil dengan baik:Update sidebar logo CSS to display KT text properlyUpdate sidebar logo CSS to display KT text properlySekarang tambahkan CSS untuk error dan warning agar lebih bersih di sidebar:Edited 4 files, viewed 2 filesEdited 4 files, viewed 2 filesSekarang bersihkan sisa emoji di chart titles dan status kolom:Systematized emoji removal across interface components comprehensivelySystematized emoji removal across interface components comprehensivelySekarang bersihkan sisa emoji di chart titles, tabel, prediksi box, dan tips:Ran 4 commands, viewed a file, edited a fileRan 4 commands, viewed a file, edited a fileSekarang lakukan uji sintaks Python dan salin ke output:Mengidentifikasi dan memperbaiki kesalahan sintaks kamus yang rusakMengidentifikasi dan memperbaiki kesalahan sintaks kamus yang rusakPerbaiki sintaks dictionary yang rusak akibat replace icon:Edited a file, ran a commandEdited a file, ran a commandSintaks OK. Sekarang rapikan tampilan tip-card agar icon teks terlihat profesional:Viewed a file, edited a file, ran a commandViewed a file, edited a file, ran a commandBerikut ringkasan semua perubahan yang dilakukan:
-Sidebar (fokus utama):
-
-Tombol collapse/expand sidebar sekarang ditampilkan kembali (sebelumnya disembunyikan) sehingga sidebar bisa dibuka-tutup secara interaktif
-Selectbox Tahun & Bulan — teks nilai yang dipilih kini putih tebal (font-weight: 700) dan kontras tinggi, tidak lagi gelap/sulit dibaca
-Dropdown menu saat terbuka juga disesuaikan warnanya (background navy, teks putih, hover orange)
-Tombol upload — dihilangkan duplikasi "Pilih File Excel" ganda; sekarang hanya satu tombol bersih
-File yang sudah diupload ditampilkan dengan background hijau muda agar terlihat jelas statusnya
-Semua label (Pilih Tahun, Pilih Bulan, Filter Tampilan) lebih terang dan tebal
-
-Seluruh dashboard:
-
-Semua emoji dekoratif dihapus dari tab, judul seksi, header, footer, grafik, tabel, badge status, pesan error/warning
-Ikon tip-card diganti dengan lingkaran berwarna (merah/hijau/biru/kuning) sesuai konteks
-Indikator kepercayaan prediksi diganti dengan titik warna (merah/kuning/hijau)
-Kolom tabel (Bulan, Pemasukan, dll.) tampil tanpa emoji
-Dashboard karang tarunaPY DownloadYou said: perbaikan sidebar yang aku inginkan ada di kode yang manaperbaikan sidebar yang aku inginkan ada di kode yang mana16 MeiClaude responded: Perbaikan sidebar tersebar di 3 bagian dalam kode:Mengidentifikasi lokasi perbaikan sidebar dalam kodeMengidentifikasi lokasi perbaikan sidebar dalam kodePerbaikan sidebar tersebar di 3 bagian dalam kode:
-
-1. CSS Sidebar — baris ~336 s/d ~560
-Ini yang mengatur tampilan visual seluruh sidebar:
-
-~336–430 → warna background, tombol collapse, label, selectbox (termasuk warna teks Tahun/Bulan)
-~430–500 → file uploader (tombol upload, file yang sudah dipilih)
-~500–560 → kartu info, badge surplus/defisit, divider, logo, menu navigasi, footer
-
-
-2. Fungsi render_sidebar() — sekitar baris ~1018
-Ini yang mengatur konten/logika sidebar (bukan tampilan):
-
-Logo KT di atas
-Widget st.file_uploader
-Selectbox Pilih Tahun dan Pilih Bulan
-Kartu ringkasan data (jumlah transaksi, pemasukan, pengeluaran)
-Menu navigasi
-Footer
-
-
-3. CSS dropdown menu global — dalam blok CSS yang sama (~baris 431–445)
-css[data-baseweb="popover"] [data-baseweb="menu"] { ... }
-[data-baseweb="popover"] [role="option"] { ... }
-Ini khusus untuk warna teks saat dropdown terbuka (pilihan tahun/bulan yang muncul ke bawah) — perlu selector terpisah karena dropdown Streamlit render di luar elemen sidebar secara teknis.
-
-Kalau mau cek langsung, cari teks ini di editor:
-
-/* ======= SIDEBAR ======= untuk blok CSS
-def render_sidebar(): untuk fungsi kontennya
-You said: kode untuk hapus ikon bagian ringkasan yang mana?kode untuk hapus ikon bagian ringkasan yang mana?16 MeiClaude responded: Bagian yang menghapus ikon di Ringkasan ada di beberapa tempat:Bagian yang menghapus ikon di Ringkasan ada di beberapa tempat:
-
-1. KPI Cards (kartu angka utama) — fungsi render_kpi() sekitar baris ~1185
-pythonkartu = [
-    {'w': CLR_NAVY,  'icon':'',   # ← dikosongkan (aslinya '🏦')
-     'label':'Saldo Kas Sekarang', ...},
-    {'w': CLR_GREEN, 'icon':'',   # ← dikosongkan (aslinya '📥')
-     'label':'Total Pemasukan', ...},
-    ...
-]
-
-2. Judul seksi Ringkasan — di fungsi main() sekitar baris ~2039
-pythonst.markdown(
-    f'<div class="section-title">Ringkasan Keuangan — Tahun {tahun_aktif}...',
-    # aslinya: '📌 Ringkasan Keuangan — ...'
-)
-
-st.markdown(
-    '<div class="section-title">Kondisi Kesehatan Keuangan</div>',
-    # aslinya: '🏥 Kondisi Kesehatan Keuangan'
-)
-
-3. Tab label — di fungsi main() sekitar baris ~2027
-pythontab1, tab2, ... = st.tabs([
-    "Ringkasan",   # aslinya: "📌 Ringkasan"
-    "Grafik",      # aslinya: "📈 Grafik"
-    ...
-])
-
-4. Caption health score — sekitar baris ~2051
-pythonst.caption(
-    "Skor 0–100%  ·  Sangat Sehat (70–100%)  ·  ..."
-    # aslinya ada 🟢 🟡 🔴 di depan setiap kategori
-)
-Intinya semua penghapusan ikon di Ringkasan dilakukan dengan mengosongkan string atau menghapus karakter emoji langsung dari nilai yang dikirim ke HTML/markdown.You said: hapuslah sebagian ikon dari kode tersebut sehingga tampilannya sangat profesionalimport streamlit as st
-import pandas as pd
-import numpy as np
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_absolute_error, r2_score
-from scipy.stats import ttest_ind
-from datetimpastedhapuslah sebagian ikon dari kode tersebut sehingga tampilannya sangat profesional16 MeiClaude responded: Baik, saya akan bekerja langsung dari kode yang dikirim dan membuat versi bersih yang profesional secara menyeluruh.Systematisasi penghapusan ikon untuk menciptakan desain profesionalSystematisasi penghapusan ikon untuk menciptakan desain profesionalBaik, saya akan bekerja langsung dari kode yang dikirim dan membuat versi bersih yang profesional secara menyeluruh.Write the complete clean professional version from scratchWrite the complete clean professional version from scratchWrite the complete clean professional version from scratchScriptDoneYou said: lanjutkanlanjutkan13.35Claude responded: Selesai.Assessed syntax dan memindahkan file ke outputAssessed syntax dan memindahkan file ke outputSelesai. Ini versi bersih yang ditulis ulang penuh dari kode asli. Berikut ringkasan semua yang diubah:
-Ikon dihapus sepenuhnya dari:
-
-Tab navigasi (Ringkasan, Grafik, Prediksi, Detail, Tips & Saran)
-Semua judul seksi (section-title)
-Header utama dan badge — diganti teks KT
-Sidebar: logo, label filter, kartu ringkasan, menu navigasi, footer
-KPI cards — kolom icon dihapus, padding disesuaikan
-Prediksi box dan 4 item di dalamnya
-Kartu forecast 3 bulan
-Ringkasan prediksi dan pesan kondisi keuangan
-Anomali — diganti badge teks Naik / Turun
-Semua judul grafik (Plotly chart titles)
-Nama legenda grafik bar (Pemasukan, Pengeluaran)
-Kolom tabel rekap
-Tombol download
-Pesan error, warning, info, dan success
-Footer
-
-Diganti dengan alternatif visual yang bersih:
-
-Indikator kesehatan keuangan → titik warna (dot CSS) bukan emoji
-Skor kesehatan keseluruhan → angka dan label teks saja, tanpa face emoji
-Tips card → lingkaran berwarna dengan label singkat (!, OK, #1, i, N)
-Akurasi prediksi → titik warna sesuai level kepercayaan (hijau/kuning/merah)
-Status surplus/defisit di tabel → teks bersih tanpa simbol
-Dashboard karang tarunaPY DownloadYou said: gantilah icon seperlunya saja, untuk header utama dan badge jangan hanya tulisan, itu kurang profesional.gantilah icon seperlunya saja, untuk header utama dan badge jangan hanya tulisan, itu kurang profesional.13.37Claude responded: Saya akan tambahkan ikon kembali secara selektif — fokus di header, badge, dan beberapa titik yang memang membantu secara visual.Strategized targeted icon placement untuk header dan badge profesionalStrategized targeted icon placement untuk header dan badge profesionalSaya akan tambahkan ikon kembali secara selektif — fokus di header, badge, dan beberapa titik yang memang membantu secara visual.Viewed 2 files, edited 2 filesViewed 2 files, edited 2 filesSekarang update konten header — logo pakai SVG inline, badge dengan indikator visual:Update main header with SVG icon and better badgeUpdate main header with SVG icon and better badgeSekarang tambahkan ikon SVG juga di sidebar logo dan welcome screen:Edited 2 filesEdited 2 filesSekarang tambahkan beberapa ikon fungsional di tempat yang membantu — KPI cards dan tab:Edited 2 files, ran a command, read a fileEdited 2 files, ran a command, read a fileIni yang diubah:
-Header utama — logo diganti SVG ikon gedung/institusi (bukan emoji, bukan tulisan), badge sekarang punya titik oranye kecil di depan teks "Portal Manajemen Desa" sehingga terasa lebih bernyawa.
-Sidebar — logo KT di atas juga pakai SVG ikon gedung yang sama, konsisten dengan header.
-Welcome screen — ikon di tengah juga SVG gedung, bukan teks "KT".
-KPI cards — ditambahkan ikon minimal yang fungsional: 🏦 untuk Saldo Kas, ↑ / ↓ untuk Pemasukan/Pengeluaran, ▲ / ▼ untuk Surplus/Defisit (berubah warna sesuai kondisi), % untuk Persentase Ditabung — semuanya berwarna sesuai tema kartu, bukan dekoratif.
-Bagian lain (tab, section title, tabel, grafik, tips, footer) tetap bersih tanpa ikon karena tidak dibutuhkan secara fungsional.Dashboard karang tarunaPY DownloadYou said: tampilkan kode bagian filter tampilan bulan dan tahuntampilkan kode bagian filter tampilan bulan dan tahun13.40Claude responded: Ini kodenya, baris 692–698:Ran a command, viewed a fileRan a command, viewed a fileIni kodenya, baris 692–698:
-pythonst.markdown('<hr class="sidebar-divider">', unsafe_allow_html=True)
-st.markdown("### Filter Tampilan")
-
-tahun_list = sorted(df_preview['Tahun'].unique(), reverse=True)
-tahun_sel  = st.selectbox("Pilih Tahun", options=tahun_list, format_func=lambda x: f"Tahun {x}")
-
-bulan_tersedia = sorted(df_preview[df_preview['Tahun'] == tahun_sel]['Bulan'].unique())
-bulan_opts = ['Semua Bulan'] + [MONTH_ID[b] for b in bulan_tersedia]
-bulan_sel  = st.selectbox("Pilih Bulan", options=bulan_opts)
-Penjelasan singkat tiap baris:
-
-tahun_list — ambil semua tahun unik dari data, diurutkan terbaru di atas
-tahun_sel — selectbox Tahun, nilai ditampilkan sebagai "Tahun 2024" lewat format_func
-bulan_tersedia — hanya bulan yang ada datanya di tahun yang dipilih (bukan semua 12 bulan)
-bulan_opts — gabungkan opsi "Semua Bulan" + nama bulan dalam Bahasa Indonesia (MONTH_ID)
-bulan_sel — selectbox Bulan, nilai balik berupa nama bulan seperti "Januari", "Februari", dst.
-
-Ada yang ingin diubah dari bagian ini?You said: apakah bisa warna fontnya diganti?apakah bisa warna fontnya diganti?13.41Claude responded: Bisa.Bisa. Font color di sidebar bisa diubah lewat CSS yang sudah ada. Mau diganti seperti apa?Silakan pilih dulu ya — bagian mana dan warna apa yang diinginkan, nanti langsung saya terapkan ke kode.You said: Q: Bagian mana yang ingin diganti warna fontnya?Q: Bagian mana yang ingin diganti warna fontnya?
-A: KeduanyaQ: Warna yang diinginkan?
-A: Putih penuh (#FFFFFF)13.42Claude responded: Keduanya sudah saya terapkan.Memverifikasi CSS dropdown dan label sudah berwarna putihMemverifikasi CSS dropdown dan label sudah berwarna putihKeduanya sudah saya terapkan. Mari pastikan CSS-nya sudah mencakup semua kondisi dengan benar:Reinforced CSS selectors untuk memastikan font putih penuhReinforced CSS selectors untuk memastikan font putih penuhLabel dan nilai sudah diset #FFFFFF, tapi perlu diperkuat agar tidak tertimpa CSS bawaan Streamlit. Saya tambahkan selector yang lebih lengkap:Edited a file, ran a command, read a fileEdited a file, ran a command, read a filePerubahan yang dilakukan — CSS diperkuat dengan selector tambahan:
-Label (Pilih Tahun & Pilih Bulan):
-
-Ditambah label p, .stSelectbox label, [data-testid="stWidgetLabel"], dan [data-testid="stWidgetLabel"] p — karena Streamlit terkadang membungkus teks label dalam elemen yang berbeda tergantung versi
-Ditambah opacity: 1 !important agar tidak ada transparansi tersembunyi
-
-Nilai terpilih di dalam kotak dropdown:
-
-Ditambah selector input dan [class*="Input"] untuk menangkap kasus di mana nilai dirender sebagai input field
-Ditambah opacity: 1 !important untuk memastikan penuh putih tanpa fade
-Dashboard karang tarunaPY DownloadYou said: gantilah warna dari icon inigantilah warna dari icon ini13.50Claude responded: Pilih warna yang diinginkan ya, nanti langsung saya terapkan.Deliberated icon color modification without specified target hueDeliberated icon color modification without specified target huePilih warna yang diinginkan ya, nanti langsung saya terapkan.You said: Q: Mau diganti ke warna apa?Q: Mau diganti ke warna apa?
-A: Biru terang (#2E5BBA)13.50Claude responded: Selesai.Melacak lokasi CSS sidebar logo untuk perubahan warnaMelacak lokasi CSS sidebar logo untuk perubahan warnaSelesai. Background icon berubah dari gradien oranye menjadi gradien navy → biru terang (#1B3A6B ke #2E5BBA), shadow-nya juga disesuaikan ke warna biru. Hasilnya akan lebih serasi dengan tema header utama dashboard.Dashboard karang tarunaPY DownloadYou said: mau lihat kode untuk mengganti warna tersebut, agar aku dapat menggantinya sendiri.mau lihat kode untuk mengganti warna tersebut, agar aku dapat menggantinya sendiri. berikan langkah-langkah dalam pergantiannya13.52Claude responded: Berikut kode yang mengatur warna icon tersebut, ada di bagian CSS sekitar baris ~400:Berikut kode yang mengatur warna icon tersebut, ada di bagian CSS sekitar baris ~400:
-css.sidebar-logo .logo-wrap {
-    background: linear-gradient(135deg, #1B3A6B, #2E5BBA);
-    box-shadow: 0 4px 18px rgba(46,91,186,0.40);
+    background-color: #2E5BBA !important; 
+    border-color: var(--orange) !important;
 }
 
-Langkah-langkah menggantinya:
-1. Buka file dashboard_karang_taruna.py di editor (VS Code, Notepad++, dll.)
-2. Cari teks .sidebar-logo .logo-wrap menggunakan Ctrl+F
-3. Ganti warna background — ada dua angka hex di baris background:
-cssbackground: linear-gradient(135deg, #1B3A6B, #2E5BBA);
-/*                                   ↑ warna awal   ↑ warna akhir */
-Misalnya ingin oranye kembali:
-cssbackground: linear-gradient(135deg, #E67E22, #F39C12);
-4. Ganti warna shadow — sesuaikan rgba di baris box-shadow agar cocok dengan warna baru:
-cssbox-shadow: 0 4px 18px rgba(46,91,186,0.40);
-/*                          ↑ ini adalah versi RGB dari warna utama */
-Untuk oranye misalnya:
-cssbox-shadow: 0 4px 18px rgba(243,156,18,0.40);
-5. Simpan file lalu jalankan ulang Streamlit.
-
-Referensi konversi hex ke RGB (untuk shadow):
-HexRGB#1B3A6B27, 58, 107#2E5BBA46, 91, 186#F39C12243, 156, 18#27AE6039, 174, 96#E74C3C231, 76, 60
-Angka 0.40 di akhir rgba adalah tingkat transparansi shadow (0.0 = transparan, 1.0 = penuh). Bisa dibiarkan tetap 0.40 untuk semua warna.You said: untuk mengganti warna filter bulan dan tahun agar menjadi tidak transparan caranya gimana?untuk mengganti warna filter bulan dan tahun agar menjadi tidak transparan caranya gimana?13.56Claude responded: Cari bagian ini di CSS sekitar baris ~294, gunakan Ctrl+F dengan kata kunci .Cari bagian ini di CSS sekitar baris ~294, gunakan Ctrl+F dengan kata kunci .sidebar-logo .logo-wrap lalu scroll sedikit ke bawah, atau cari langsung /* SELECT BOX */:
-css/* SELECT BOX */
-[data-testid="stSidebar"] [data-baseweb="select"] > div {
-    background-color: rgba(255,255,255,0.12) !important;  /* ← ini yang bikin transparan */
-    border: 1.5px solid rgba(255,255,255,0.30) !important;
-    border-radius: 10px !important;
-}
-
-Langkah-langkah:
-1. Cari teks /* SELECT BOX */ dengan Ctrl+F
-2. Ganti background-color — hilangkan transparansi:
-css/* Sebelum (transparan 12%) */
-background-color: rgba(255,255,255,0.12) !important;
-
-/* Sesudah (tidak transparan, warna solid) */
-background-color: #1B3A6B !important;
-3. Ganti juga border agar sesuai:
-css/* Sebelum */
-border: 1.5px solid rgba(255,255,255,0.30) !important;
-
-/* Sesudah */
-border: 1.5px solid rgba(255,255,255,0.60) !important;
-4. Ganti juga efek hover di baris berikutnya:
-css[data-testid="stSidebar"] [data-baseweb="select"] > div:hover {
-    background-color: rgba(255,255,255,0.18) !important; /* ← ini juga transparan */
-}
-Menjadi:
-cssbackground-color: #2E5BBA !important; border-color: var(--orange) !important;
-}
 /* Nilai terpilih di dalam dropdown */
 [data-testid="stSidebar"] [data-baseweb="select"] [class*="singleValue"],
 [data-testid="stSidebar"] [data-baseweb="select"] [class*="placeholder"],
@@ -706,9 +509,9 @@ def bersihkan_data(df: pd.DataFrame) -> pd.DataFrame:
 # ============================================================
 
 def agregasi_bulanan(df: pd.DataFrame, tahun: int) -> pd.DataFrame:
-    d = df[df['Tahun'] == tahun]
-    if d.empty: return pd.DataFrame()
-    m = (d.groupby(['Bulan','BulanNama','BulanPendek'])
+    id_data = df[df['Tahun'] == tahun]
+    if id_data.empty: return pd.DataFrame()
+    m = (id_data.groupby(['Bulan','BulanNama','BulanPendek'])
          .agg(Pemasukan=('Pemasukan','sum'), Pengeluaran=('Pengeluaran','sum'),
               SaldoAkhir=('Saldo','last'), JmlTransaksi=('Pemasukan','count'))
          .reset_index().sort_values('Bulan'))
@@ -721,7 +524,7 @@ def agregasi_bulanan(df: pd.DataFrame, tahun: int) -> pd.DataFrame:
 # DETEKSI ANOMALI
 # ============================================================
 
-def deteksi_anomali(monthly: pd.DataFrame) -> list:
+def deteksi_anomali(monthly) -> list:
     anomali = []
     if len(monthly) < 3: return anomali
     for col, label in [('Pengeluaran','Pengeluaran'),('Pemasukan','Pemasukan')]:
@@ -763,7 +566,7 @@ def _mape(actual, predicted):
     if mask.sum() == 0: return 100.0
     return float(np.mean(np.abs((a[mask] - p[mask]) / a[mask])) * 100)
 
-def prediksi(monthly: pd.DataFrame, tahun: int) -> dict:
+def prediksi(monthly, tahun: int) -> dict:
     n = len(monthly); avg_pem = float(monthly['Pemasukan'].mean()); avg_pen = float(monthly['Pengeluaran'].mean())
     last_sal = float(monthly['SaldoAkhir'].iloc[-1]); last_bln = int(monthly['Bulan'].iloc[-1])
     next_bln = (last_bln % 12) + 1; next_thn = tahun if last_bln < 12 else tahun + 1
@@ -849,7 +652,7 @@ def prediksi(monthly: pd.DataFrame, tahun: int) -> dict:
 # HEALTH SCORE
 # ============================================================
 
-def hitung_health(monthly: pd.DataFrame) -> dict:
+def hitung_health(monthly) -> dict:
     ti, to = float(monthly['Pemasukan'].sum()), float(monthly['Pengeluaran'].sum()); n = len(monthly)
     tabungan   = max(0.0, min(100.0, (ti - to) / ti * 100)) if ti > 0 else 0.0
     stabilitas = float((monthly['Surplus'] >= 0).sum()) / n * 100 if n > 0 else 0.0
@@ -1004,7 +807,7 @@ def render_welcome():
         <div class="welcome-title">Selamat Datang di Dashboard Keuangan</div>
         <div class="welcome-desc">
             Dashboard ini membantu warga desa dan anggota Karang Taruna memantau keuangan
-            organisasi secara mudah, jelas, dan transparan — tanpa perlu memahami ilmu data.
+            organisasi secara mudah, jelas, and transparan — tanpa perlu memahami ilmu data.
         </div>
         <div class="welcome-steps">
             <div class="step-item">
@@ -1045,13 +848,13 @@ def _delta_label(monthly, col):
     color = CLR_GREEN if d >= 0 else CLR_RED
     return f'<div class="kpi-delta" style="color:{color};">{arrow} {abs(d):.1f}% vs bulan lalu</div>'
 
-def render_kpi(monthly, pred):
-    ti = monthly['Pemasukan'].sum(); to = monthly['Pengeluaran'].sum()
-    sur = ti - to; sal = monthly['SaldoAkhir'].iloc[-1]; pct = (sur / ti * 100) if ti > 0 else 0.0
+def render_kpi(monthly_filtered, pred):
+    ti = monthly_filtered['Pemasukan'].sum(); to = monthly_filtered['Pengeluaran'].sum()
+    sur = ti - to; sal = monthly_filtered['SaldoAkhir'].iloc[-1]; pct = (sur / ti * 100) if ti > 0 else 0.0
     kartu = [
         {'w': CLR_NAVY,  'icon':'🏦', 'label':'Saldo Kas',        'nilai': rupiah(sal, True), 'sub':'Uang tunai tersedia saat ini', 'delta':''},
-        {'w': CLR_GREEN, 'icon':'↑',  'label':'Total Pemasukan',  'nilai': rupiah(ti, True),  'sub':'Semua uang yang masuk',        'delta': _delta_label(monthly,'Pemasukan')},
-        {'w': CLR_RED,   'icon':'↓',  'label':'Total Pengeluaran','nilai': rupiah(to, True),  'sub':'Semua uang yang keluar',       'delta': _delta_label(monthly,'Pengeluaran')},
+        {'w': CLR_GREEN, 'icon':'↑',  'label':'Total Pemasukan',  'nilai': rupiah(ti, True),  'sub':'Semua uang yang masuk',        'delta': _delta_label(monthly_filtered,'Pemasukan')},
+        {'w': CLR_RED,   'icon':'↓',  'label':'Total Pengeluaran','nilai': rupiah(to, True),  'sub':'Semua uang yang keluar',       'delta': _delta_label(monthly_filtered,'Pengeluaran')},
         {'w': CLR_GREEN if sur >= 0 else CLR_RED,
          'icon': '▲' if sur >= 0 else '▼',
          'label':'Surplus / Defisit', 'nilai': rupiah(sur, True),
@@ -1273,11 +1076,11 @@ def chart_akurasi(monthly):
     return fig
 
 def chart_kategori(df, tahun):
-    d = df[df['Tahun'] == tahun]
-    if 'Kategori' not in d.columns: return None
-    unique_kat = d['Kategori'].dropna().unique()
+    id_data = df[df['Tahun'] == tahun]
+    if 'Kategori' not in id_data.columns: return None
+    unique_kat = id_data['Kategori'].dropna().unique()
     if len(unique_kat) <= 1 and (len(unique_kat) == 0 or unique_kat[0] == 'Umum'): return None
-    kat = (d.groupby('Kategori').agg(Pengeluaran=('Pengeluaran','sum'), Pemasukan=('Pemasukan','sum')).reset_index().sort_values('Pengeluaran', ascending=True))
+    kat = (id_data.groupby('Kategori').agg(Pengeluaran=('Pengeluaran','sum'), Pemasukan=('Pemasukan','sum')).reset_index().sort_values('Pengeluaran', ascending=True))
     fig = go.Figure()
     fig.add_trace(go.Bar(y=kat['Kategori'], x=kat['Pengeluaran'], orientation='h', name='Pengeluaran', marker_color=CLR_RED, marker_line_width=0, hovertemplate='%{y}<br>Pengeluaran: Rp %{x:,.0f}<extra></extra>'))
     fig.add_trace(go.Bar(y=kat['Kategori'], x=kat['Pemasukan'], orientation='h', name='Pemasukan', marker_color=CLR_GREEN, marker_line_width=0, hovertemplate='%{y}<br>Pemasukan: Rp %{x:,.0f}<extra></extra>'))
@@ -1309,8 +1112,8 @@ def chart_yoy(df, tahun_list):
 # HEALTH BARS
 # ============================================================
 
-def render_health(monthly):
-    h = hitung_health(monthly)
+def render_health(monthly_filtered):
+    h = hitung_health(monthly_filtered)
     bars = [
         {'label':'Tingkat Tabungan',            'val': h['tabungan'],    'sub': f"{h['tabungan']:.1f}% dari pemasukan berhasil ditabung  ·  Target sehat: di atas 20%"},
         {'label':'Bulan dengan Keuangan Positif','val': h['stabilitas'],  'sub': f"{h['stabilitas']:.0f}% bulan berjalan surplus  ·  Semakin tinggi semakin stabil"},
